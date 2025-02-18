@@ -1,5 +1,5 @@
-import EditTaskForm from '@/components/EditTaskForm/EditTaskForm';
-import { TaskDocument } from '@/models/task';
+import EditTaskForm from "@/components/EditTaskForm/EditTaskForm";
+import { TaskDocument } from "@/models/task";
 
 interface Params {
   params: { id: string };
@@ -7,7 +7,7 @@ interface Params {
 
 const getTask = async (id: string): Promise<TaskDocument> => {
   const response = await fetch(`${process.env.API_URL}/tasks/${id}`, {
-    cache: 'no-store',
+    cache: "no-store",
   });
 
   const data = await response.json();
